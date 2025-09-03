@@ -1,24 +1,46 @@
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Layout from './Components/Layout';
+import Login from './Components/Auth/Login';
+import Register from './Components/Auth/Register'
+import Home from './Components/Home/Home';
+import Player from './Components/Home/Player';
 import './App.css';
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const handleLogout = async () => {
+    setIsAuthenticated(false);
+    localStorage.clear()
+  }
+
+  useEffect(() => {
+    const storedIsAuthenticated = JSON.parse(localStorage.getItem('isAuthenticated'));
+    if(storedIsAuthenticated !== isAuthenticated)
+      setIsAuthenticated(storedIsAuthenticated)
+  }, [isAuthenticated]);
+
+  const handleLogin = async () => {
+    setIsAuthenticated(true);
+    localStorage.setItem('isAuthenticated', JSON.stringify(true))
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Layout isAuthenticated={isAuthenticated} onLogout={handleLogout}>
+        <div>
+          <Routes>
+            <Route path="/" element={<Login onLogin={handleLogin}/>}/>
+            <Route path="/register" element={<Register/>}/>
+            <Route path="/home" element={<Home onLogout={handleLogout}/>} />
+            <Route path="/player" element={<Player/>} />
+
+          </Routes>
+        </div>
+      </Layout>
+
+    </Router>
   );
 }
 

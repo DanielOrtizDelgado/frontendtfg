@@ -1,0 +1,438 @@
+/*NavBar CSS*/
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #A9A9A9;
+}
+
+.navBar.center {
+    justify-content: center;
+}
+
+.navBar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navBar-logo img {
+    height: 100px;
+    margin-right: 1rem;
+    margin-left: 2rem;
+}
+
+.navbar-link {
+    display: flex;
+    align-items:center;
+    background-color: #A9A9A9;
+}
+
+.logout-button {
+    font-size: 1.5rem;         /* texto grande */
+    font-weight: bold;
+    color: #575656;;              /* sin color azul */
+    text-decoration: none;     /* sin subrayado */
+    margin-left: 370%;         /* empuja a la derecha si está en flex */
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    color: #333;               /* opcional: efecto hover */
+}
+
+/*LogIn CSS*/
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex;
+    padding: 0.5rem;
+    background-color: #e6e3e3; /*#f4f4f4*/
+    width: 98.8%;
+}
+
+.login-section {
+    background-color: #f1efef; /*#fff*/
+    padding: 2rem;
+    border-radius: 10px;
+    border-color: #C0C0C0;
+    box-shadow: 0 2px 5px rgba(124, 76, 255, 0.1);
+
+    text-align: center;
+    margin: 1rem;
+    flex: 1 1 45%;
+}
+
+.input-Login {
+    display: flex;
+    flex-direction: column; /* Esto pone el label encima del input */
+    text-align: left;
+    align-items: center;
+    margin-bottom: 12px; /* opcional: para separar bloques */
+}
+
+.label-login {
+    flex: 1;
+    text-align: left;
+    margin-right: 2px;
+    font-size: 14px;
+    margin-bottom: 4px; /* espacio entre label y input */
+    width: 97%; /* Esto asegura que el text-align funcione */
+}
+
+.border-name {
+    border-width: 0.5px 0.5px 0.5px 0.5px;
+    border-color: #8D8D8D;
+    box-shadow: 0 2px 5px rgba(77, 77, 77, 0.25);
+    border-radius: 5px;
+    padding: 9px 11px; /* mejora la experiencia de usuario */
+    width: 94.5%;
+}
+
+.border-name-select {
+    border-width: 0.5px 0.5px 0.5px 0.5px;
+    border-color: #8D8D8D;
+    box-shadow: 0 2px 5px rgba(77, 77, 77, 0.25);
+    border-radius: 5px;
+    padding: 9px 11px; /* mejora la experiencia de usuario */
+    width: 103%;
+}
+
+.link-forgot {
+    display: flex;
+    color: black;
+    font-size: 14px; /* opcional */
+    align-items: start;
+    padding-top: 2%;
+}
+
+.initial-text {
+    font-size: 45px;
+}
+
+/*Register CSS*/
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex;
+    padding: 0.5rem;
+    background-color: #e6e3e3; /*#f4f4f4*/
+    width: 98.8%;
+}
+
+.register-content {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: row; /* para poner las secciones en fila */
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+}
+
+.register-section {
+    flex: 1;
+    background-color: #f1efef;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(124, 76, 255, 0.1);
+    text-align: center;
+}
+
+.register-button{
+    padding-top: 27%;
+}
+
+@media (max-width: 768px) {
+  .register-form {
+    flex-direction: column; /* apila las secciones en columna */
+    align-items: center;    /* centra las columnas */
+  }
+
+  .register-section {
+    width: 100%;            /* que ocupen todo el ancho disponible */
+    max-width: 400px;       /* ancho máximo para que no se vean gigantes */
+    margin-bottom: 1rem;    /* separación entre secciones */
+  }
+}
+
+/*TechnicalDirector CSS*/
+
+.technicalDirector-container-containers {
+  display: flex;
+  align-content: flex-start;
+  padding: 1rem;
+  gap: 2%;
+}
+
+.predict-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;/*33.33%;*/
+  border: 2px solid #acabab;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.player-list-container {
+  width: 33.33%;             /* Un tercio de la pantalla */
+  height: 75vh; /* o 300px */
+  overflow-y: auto;          /* Scroll vertical si se necesita */
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: #dbdbdb; /* Fondo opcional */
+  border: 3px solid #5a5a5a;
+  border-radius: 8px;
+}
+
+.player-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.player-card:hover {
+  transform: scale(1.02);
+}
+
+.modal-backdrop{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.4);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.modal{
+  background:#fff;
+  padding:1rem 1.5rem;
+  border-radius:10px;
+  max-width:800px;
+  width:90%;
+  max-height:80vh;
+  overflow:auto;
+}
+
+.close-button-modal1 {
+  position: absolute;
+  height: 6.5%;
+  width:3.2%;
+  top: 29%;
+  right: 18%; /* distancia desde la derecha */
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  line-height: 1;      /* asegura que no se vea demasiado alto */
+  padding: 2px;        /* opcional: menos espacio interno */
+}
+
+.close-button-modal1:hover {
+  background: #6d0c01;
+  color: #e74c3c; /* rojo al pasar el ratón */
+}
+
+.close-button-modal2 {
+  position: absolute;
+  height: 6.5%;
+  width:3.2%;
+  top: 32%;
+  right: 18%; /* distancia desde la derecha */
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  line-height: 1;      /* asegura que no se vea demasiado alto */
+  padding: 2px;        /* opcional: menos espacio interno */
+}
+
+.close-button-modal2:hover {
+  background: #6d0c01;
+  color: #e74c3c; /* rojo al pasar el ratón */
+}
+
+/* Ajusta los días seleccionados */
+.react-calendar__tile.red-tile {
+  background-color: #f44336 !important; /* rojo */
+  color: white !important;
+  border-radius: 10px; /* menos redondeado */
+  padding: 0.3rem 0 !important;
+}
+
+/* Fechas azules */
+.react-calendar__tile.blue-tile {
+  background-color: #2196f3 !important; /* azul */
+  color: white !important;
+  border-radius: 10px;
+  padding: 0.3rem 0 !important;
+}
+
+/* Estilo para la cabecera (mes y año) */
+.react-calendar__navigation__label {
+  color: #222 !important;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Días de la semana (LUN, MAR, ...) */
+.react-calendar__month-view__weekdays {
+  color: #222 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Corregir color de números dentro de los días */
+.react-calendar__month-view__days__day {
+  color: #222 !important;
+}
+
+/* Botones de navegación izquierda y derecha */
+.react-calendar__navigation button {
+  color: #222 !important;         /* color visible */
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Evita que estén desactivados visualmente */
+.react-calendar__navigation button:disabled {
+  opacity: 0.3;
+}
+
+/* Meses en la vista de selección de mes */
+.react-calendar__year-view .react-calendar__tile {
+  color: #222 !important;
+  font-weight: 500;
+}
+
+/* También aplica a décadas si lo necesitas */
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+  color: #222 !important;
+}
+
+.react-calendar__tile--now {
+  /*background: none !important;*/
+  color: #1976d2 !important;  /* azul o color que prefieras */
+  font-weight: bold;
+}
+
+/*
+.react-calendar__tile--active {
+  background: #4caf50 !important;  /* color de fondo para el día seleccionado
+  color: white !important;
+  border-radius: 8px;
+} */
+
+/*Player CSS*/
+
+.player-container-containers{
+  display: flex;
+  align-content: flex-start;
+  padding: 1rem;
+  gap: 2%;
+}
+
+.player-button-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+  border: 2px solid #acabab;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.graphics-container-containers{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;               /* separación entre gráficas */
+  flex-wrap: wrap;         /* permite que se bajen si no caben */
+  padding: 2rem;
+}
+
+.graphic-container {
+  width: 45%;            /* o 45%, o lo que prefieras */
+  padding: 15px;
+  margin: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  background: #fff;
+}
+
+/*Buttons CSS*/
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2%;
+    gap: 2%; /* Ajusta la separación entre botones */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #535353;
+    color:#f4f4f4;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #2b2a2a;
+}
+
+button:disabled {
+  opacity: 0.5;
+  /*cursor: not-allowed;*/
+}
+
+
+/*Footer CSS*/
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-section {
+    margin: 0.25rem 0;
+}
+
+.contact-info {
+    flex: 1;
+}
